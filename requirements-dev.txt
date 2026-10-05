@@ -1,0 +1,8 @@
+# Development: EDA notebook, plotting, tests
+-r requirements.txt
+matplotlib==3.11.2
+seaborn==0.13.2
+jupyter==1.1.1
+ipykernel==7.4.0
+pytest==9.1.1
+httpx2==2.13.1

@@ -1,0 +1,10 @@
+# Runtime: training pipeline + inference API
+numpy==2.4.6
+pandas==3.0.6
+scikit-learn==1.9.1
+scipy==1.17.1
+xgboost==3.2.0
+joblib==1.6.0
+fastapi==0.142.2
+uvicorn[standard]==0.54.0
+pydantic==2.13.5

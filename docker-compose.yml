@@ -1,0 +1,14 @@
+services:
+  churn-api:
+    build: .
+    image: churn-api
+    ports:
+      - "${API_PORT:-8000}:8000"   # host port: API_PORT=8001 docker compose up
+    restart: unless-stopped
+    healthcheck:
+      # The slim image has no curl, so probe /health with Python.
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 5s
+      start_period: 10s
+      retries: 3
